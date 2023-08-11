@@ -11,7 +11,7 @@ import SwiftUI
 struct ProjectionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GoalListView()
         }
     }
 }
