@@ -13,8 +13,13 @@ struct GoalCardView: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text("\(goal.name)")
-                .font(.headline)
+            HStack {
+                Text("\(goal.name)")
+                    .font(.headline)
+                Spacer()
+                Label("Done", systemImage: "circle")
+                    .padding(.horizontal)
+            }
         }
     }
 }
