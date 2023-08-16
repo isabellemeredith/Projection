@@ -8,21 +8,17 @@
 import SwiftUI
 
 struct GoalCardView: View {
-    let goal: Goal
+    @Binding var goal: Goal
     
     var body: some View {
-        
         VStack(alignment: .leading) {
             HStack {
-                Text("\(goal.name)")
-                    .font(.headline)
-                Spacer()
-                Label("Done", systemImage: "circle")
+                GoalTaskView(goalTask: $goal)
             }
             .padding()
             Section {
-                ForEach(goal.goalTasks) {goal in
-                    Text("\(goal.name) \n")
+                ForEach($goal.goalTasks) {$goalTask in
+                    GoalTaskView(goalTask: $goalTask)
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 10))
@@ -32,6 +28,6 @@ struct GoalCardView: View {
 
 struct GoalCardView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalCardView(goal: Goal.sampleGoals[0])
+        GoalCardView(goal: .constant(Goal.sampleGoals[0]))
     }
 }

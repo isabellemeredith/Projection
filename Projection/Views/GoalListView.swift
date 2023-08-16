@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GoalListView: View {
-    let goals: [Goal]
+    @Binding var goals: [Goal]
     
     var body: some View {
         
@@ -17,8 +17,8 @@ struct GoalListView: View {
                 Text("To Do")
                     .font(.headline)
             }
-            List(goals) { goal in
-                GoalCardView(goal: goal)
+            List($goals) { $goal in
+                GoalCardView(goal: $goal)
             }
         }
         .padding()
@@ -27,6 +27,6 @@ struct GoalListView: View {
 
 struct GoalListView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalListView(goals: Goal.sampleGoals)
+        GoalListView(goals: .constant(Goal.sampleGoals))
     }
 }

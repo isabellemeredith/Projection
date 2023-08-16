@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0E1BFA2A8D42C700EDB283 /* GoalTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E1BF92A8D42C700EDB283 /* GoalTaskView.swift */; };
 		7E13C29F2A8588B8003BD784 /* ProjectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C29E2A8588B8003BD784 /* ProjectionApp.swift */; };
 		7E13C2A12A8588B8003BD784 /* GoalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C2A02A8588B8003BD784 /* GoalListView.swift */; };
 		7E13C2A32A8588BA003BD784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13C2A22A8588BA003BD784 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0E1BF92A8D42C700EDB283 /* GoalTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTaskView.swift; sourceTree = "<group>"; };
 		7E13C29B2A8588B8003BD784 /* Projection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E13C29E2A8588B8003BD784 /* ProjectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectionApp.swift; sourceTree = "<group>"; };
 		7E13C2A02A8588B8003BD784 /* GoalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				7E13C2A02A8588B8003BD784 /* GoalListView.swift */,
 				7E13C2CA2A858A95003BD784 /* GoalView.swift */,
 				7E13C2CF2A858EB4003BD784 /* GoalCardView.swift */,
+				7E0E1BF92A8D42C700EDB283 /* GoalTaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				7E13C2CB2A858A95003BD784 /* GoalView.swift in Sources */,
 				7E13C2A12A8588B8003BD784 /* GoalListView.swift in Sources */,
 				7E13C29F2A8588B8003BD784 /* ProjectionApp.swift in Sources */,
+				7E0E1BFA2A8D42C700EDB283 /* GoalTaskView.swift in Sources */,
 				7E13C2D02A858EB4003BD784 /* GoalCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
