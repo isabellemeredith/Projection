@@ -18,8 +18,14 @@ struct GoalCardView: View {
                     .font(.headline)
                 Spacer()
                 Label("Done", systemImage: "circle")
-                    .padding(.horizontal)
             }
+            .padding()
+            Section {
+                ForEach(goal.goalTasks) {goal in
+                    Text("\(goal.name) \n")
+                }
+            }
+            .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 10))
         }
     }
 }

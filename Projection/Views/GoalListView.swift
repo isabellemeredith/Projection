@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GoalListView: View {
+    let goals: [Goal]
+    
     var body: some View {
         
         VStack {
@@ -15,8 +17,8 @@ struct GoalListView: View {
                 Text("To Do")
                     .font(.headline)
             }
-            List {
-                
+            List(goals) { goal in
+                GoalCardView(goal: goal)
             }
         }
         .padding()
@@ -25,6 +27,6 @@ struct GoalListView: View {
 
 struct GoalListView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalListView()
+        GoalListView(goals: Goal.sampleGoals)
     }
 }
