@@ -17,6 +17,11 @@ struct GoalListView: View {
                 Text("To Do")
                     .font(.headline)
             }
+            HStack {
+                Button(action: {}) {
+                    
+                }
+            }
             List($goals) { $goal in
                 GoalCardView(goal: $goal)
             }
