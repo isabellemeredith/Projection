@@ -18,6 +18,7 @@
 		7E13C2CB2A858A95003BD784 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C2CA2A858A95003BD784 /* GoalView.swift */; };
 		7E13C2CE2A858ACB003BD784 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C2CD2A858ACB003BD784 /* Goal.swift */; };
 		7E13C2D02A858EB4003BD784 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E13C2CF2A858EB4003BD784 /* GoalCardView.swift */; };
+		7E8B0A652A9A7D7E00EB48C2 /* GoalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B0A642A9A7D7E00EB48C2 /* GoalHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7E13C2CA2A858A95003BD784 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		7E13C2CD2A858ACB003BD784 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		7E13C2CF2A858EB4003BD784 /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
+		7E8B0A642A9A7D7E00EB48C2 /* GoalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		7E13C2C92A858A88003BD784 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E8B0A642A9A7D7E00EB48C2 /* GoalHeaderView.swift */,
 				7E13C2A02A8588B8003BD784 /* GoalListView.swift */,
 				7E13C2CA2A858A95003BD784 /* GoalView.swift */,
 				7E13C2CF2A858EB4003BD784 /* GoalCardView.swift */,
@@ -290,6 +293,7 @@
 				7E13C2CE2A858ACB003BD784 /* Goal.swift in Sources */,
 				7E13C2CB2A858A95003BD784 /* GoalView.swift in Sources */,
 				7E13C2A12A8588B8003BD784 /* GoalListView.swift in Sources */,
+				7E8B0A652A9A7D7E00EB48C2 /* GoalHeaderView.swift in Sources */,
 				7E13C29F2A8588B8003BD784 /* ProjectionApp.swift in Sources */,
 				7E0E1BFA2A8D42C700EDB283 /* GoalTaskView.swift in Sources */,
 				7E13C2D02A858EB4003BD784 /* GoalCardView.swift in Sources */,

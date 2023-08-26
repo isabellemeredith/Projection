@@ -15,13 +15,12 @@ struct GoalCardView: View {
             HStack {
                 GoalTaskView(goalTask: $goal)
             }
-            .padding()
             Section {
                 ForEach($goal.goalTasks) {$goalTask in
                     GoalTaskView(goalTask: $goalTask)
                 }
             }
-            .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 10))
+            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 10))
         }
     }
 }

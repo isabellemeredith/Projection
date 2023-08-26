@@ -19,14 +19,18 @@ struct GoalListView: View {
             }
             HStack {
                 Button(action: {}) {
-                    
+                    Text("New Goal")
                 }
+                .buttonStyle(.borderedProminent)
             }
-            List($goals) { $goal in
+//            List($goals) { $goal in
+//                GoalCardView(goal: $goal)
+//            }
+            ForEach($goals) { $goal in
                 GoalCardView(goal: $goal)
+                    .frame(alignment: .leading)
             }
         }
-        .padding()
     }
 }
 

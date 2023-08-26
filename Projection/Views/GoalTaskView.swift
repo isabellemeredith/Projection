@@ -28,9 +28,11 @@ struct GoalTaskView: View {
                         }
                 }
                 Text("\(goalTask.name)")
-                    .font(.headline)
+                //    .font(.headline)
             }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
     }
 }
 

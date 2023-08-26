@@ -11,16 +11,27 @@ struct GoalView: View {
     @Binding var goal: Goal
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Section(header: Text(goal.name)) {
-            }
-            .font(.headline)
-            Section {
-                ForEach(goal.goalTasks) {goalTask in
-                    Text(goalTask.name)
+        VStack {
+            VStack {
+                GoalHeaderView(goal: $goal)
+                Button(action: {}) {
+                    Text("Break Down Goal")
+                        .frame(maxWidth: .infinity)
+//                        .padding(EdgeInsets(top: 0, leading: -10, bottom: 0, trailing: -10))
                 }
+                .buttonStyle(.borderedProminent)
             }
-            .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 10))
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+            ScrollView {
+                VStack(alignment: .leading) {
+                    ForEach($goal.goalTasks) {$goalTask in
+                        GoalTaskView(goalTask: $goalTask)
+                            .frame(alignment: .leading)
+                    }
+                    
+                }
+                .frame(alignment: .leading)
+            }
         }
     }
 }
