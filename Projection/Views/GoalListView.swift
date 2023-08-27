@@ -11,24 +11,23 @@ struct GoalListView: View {
     @Binding var goals: [Goal]
     
     var body: some View {
-        
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text("To Do")
                     .font(.headline)
             }
+            .padding()
             HStack {
                 Button(action: {}) {
                     Text("New Goal")
                 }
                 .buttonStyle(.borderedProminent)
             }
-//            List($goals) { $goal in
-//                GoalCardView(goal: $goal)
-//            }
-            ForEach($goals) { $goal in
-                GoalCardView(goal: $goal)
-                    .frame(alignment: .leading)
+            .padding(.horizontal)
+            ScrollView {
+                ForEach($goals) { $goal in
+                    GoalCardView(goal: $goal)
+                }
             }
         }
     }

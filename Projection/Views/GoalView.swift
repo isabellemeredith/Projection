@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalView: View {
     @Binding var goal: Goal
+    @State private var newTask = ""
     
     var body: some View {
         VStack {
@@ -28,6 +29,21 @@ struct GoalView: View {
                         GoalTaskView(goalTask: $goalTask)
                             .frame(alignment: .leading)
                     }
+                    HStack {
+                        TextField("New subtask here...", text: $newTask)
+                        Button(action: {
+                            withAnimation {
+                                let subtask = Goal(name: newTask, goalComplete: false, goalTasks: [], deadline: Date() + 100000)
+                                goal.goalTasks.append(subtask)
+                                newTask = ""
+                            }
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .accessibilityLabel("Add subtask")
+                        }
+                        .disabled(newTask.isEmpty)
+                    }
+                    .padding()
                     
                 }
                 .frame(alignment: .leading)
