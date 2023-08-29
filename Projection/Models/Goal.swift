@@ -26,6 +26,12 @@ struct Goal: Identifiable {
 }
 
 extension Goal {
+    static var emptyGoal: Goal {
+        Goal(name: "", goalComplete: false, goalTasks: [], deadline: Date() + 100000)
+    }
+}
+
+extension Goal {
     static let sampleGoals: [Goal] =
     [
         Goal(name: "Clean house", goalComplete: false,
